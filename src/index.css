@@ -11,7 +11,7 @@
 }
 
 .hero-gradient {
-  background: linear-gradient(135deg, rgba(45,90,39,0.1) 0%, rgba(230,126,34,0.1) 100%);
+  background: linear-gradient(135deg, rgba(48,184,178,0.1) 0%, rgba(249,115,22,0.1) 100%);
 }
 
 .card-hover {
@@ -20,4 +20,12 @@
 
 .card-hover:hover {
   transform: translateY(-5px);
+}
+
+.bg-pattern {
+  background-image: url('/lovable-uploads/43c7e6ae-7219-4abd-bcc7-a19c765e1e73.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.1;
 }

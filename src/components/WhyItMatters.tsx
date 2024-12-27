@@ -17,8 +17,9 @@ const stats = [
 
 export const WhyItMatters = () => {
   return (
-    <section className="bg-primary text-white py-20 px-4">
-      <div className="max-w-6xl mx-auto">
+    <section className="bg-primary text-white py-20 px-4 relative overflow-hidden">
+      <div className="absolute inset-0 bg-pattern"></div>
+      <div className="max-w-6xl mx-auto relative z-10">
         <h2 className="font-heading text-3xl md:text-4xl font-bold text-center mb-12">
           Why It Matters
         </h2>
