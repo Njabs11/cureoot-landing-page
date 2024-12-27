@@ -1,11 +1,11 @@
-import { Leaf, Flask, Brain } from "lucide-react";
+import { Leaf, Beaker, Brain } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 const features = [
   {
     title: "Drug Discovery",
     description: "Identifying and studying bioactive molecules from African plants using cutting-edge AI technology.",
-    icon: Flask,
+    icon: Beaker,
   },
   {
     title: "Chemical Library",
