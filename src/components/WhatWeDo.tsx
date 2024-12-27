@@ -21,27 +21,32 @@ const features = [
 
 export const WhatWeDo = () => {
   return (
-    <section className="py-24 px-4 bg-white">
-      <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="font-heading text-3xl md:text-5xl font-bold mb-6 text-accent">
+    <section className="py-32 px-4 bg-white relative overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent"></div>
+      <div className="max-w-7xl mx-auto relative z-10">
+        <div className="text-center mb-20">
+          <h2 className="font-heading text-4xl md:text-5xl font-bold mb-6 text-accent">
             What We <span className="text-primary">Do</span>
           </h2>
-          <p className="text-gray-600 max-w-2xl mx-auto text-lg">
+          <p className="text-gray-600 max-w-2xl mx-auto text-xl leading-relaxed">
             Leveraging cutting-edge technology to unlock the potential of African medicinal plants
           </p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 px-4">
           {features.map((feature, index) => (
-            <Card key={index} className="card-hover border-2 border-primary/10 bg-white">
-              <CardHeader className="text-center">
-                <div className="mx-auto bg-primary/5 w-16 h-16 rounded-full flex items-center justify-center mb-6">
-                  <feature.icon className="w-8 h-8 text-primary" />
+            <Card 
+              key={index} 
+              className="relative overflow-hidden border-none shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2"
+            >
+              <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-primary to-secondary"></div>
+              <CardHeader className="text-center pt-10">
+                <div className="mx-auto bg-gradient-to-br from-primary/10 to-secondary/10 w-20 h-20 rounded-full flex items-center justify-center mb-6">
+                  <feature.icon className="w-10 h-10 text-primary" />
                 </div>
-                <CardTitle className="font-heading text-xl mb-2">{feature.title}</CardTitle>
+                <CardTitle className="font-heading text-2xl font-bold mb-2">{feature.title}</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-gray-600 text-center">{feature.description}</p>
+                <p className="text-gray-600 text-center leading-relaxed">{feature.description}</p>
               </CardContent>
             </Card>
           ))}
