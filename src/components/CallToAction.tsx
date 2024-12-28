@@ -2,6 +2,11 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 
 export const CallToAction = () => {
+  const openTypeform = () => {
+    const popup = window as any;
+    popup.tf?.popup?.("https://form.typeform.com/to/W5ujnUGT");
+  };
+
   return (
     <section className="py-32 px-4 relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-br from-secondary/5 to-primary/5"></div>
@@ -12,19 +17,13 @@ export const CallToAction = () => {
         <p className="text-xl mb-12 text-gray-600 max-w-3xl mx-auto leading-relaxed">
           Explore how CureRoot is bringing innovation to drug discovery while preserving and honoring Africa's indigenous knowledge systems.
         </p>
-        <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
+        <div className="flex justify-center items-center">
           <Button 
             size="lg" 
-            className="bg-primary hover:bg-primary/90 text-white px-8 py-7 text-lg font-medium tracking-wide w-full sm:w-auto min-w-[200px] transition-all duration-300 ease-out transform hover:scale-105"
+            onClick={openTypeform}
+            className="bg-primary hover:bg-primary/90 text-white px-8 py-7 text-lg font-medium tracking-wide min-w-[200px] transition-all duration-300 ease-out transform hover:scale-105"
           >
             Contact Us <ArrowRight className="ml-2 h-5 w-5" />
-          </Button>
-          <Button 
-            size="lg" 
-            variant="outline" 
-            className="border-2 border-primary text-primary hover:bg-primary/5 px-8 py-7 text-lg font-medium tracking-wide w-full sm:w-auto min-w-[200px] transition-all duration-300"
-          >
-            Learn More
           </Button>
         </div>
         <p className="mt-16 text-2xl font-heading text-primary font-medium">Let's grow health, together.</p>
