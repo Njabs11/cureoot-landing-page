@@ -55,7 +55,7 @@ export const Footer = () => {
 
         <div className="mt-8 pt-8 border-t text-center">
           <p className="text-sm text-gray-500">
-            © {new Date().getFullYear()} CureRoot. All rights reserved.
+            © 2025 CureRoot. All rights reserved.
           </p>
         </div>
       </div>
