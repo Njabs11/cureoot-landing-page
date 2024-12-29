@@ -15,34 +15,27 @@ const AboutUs = () => {
         
         <div className="prose prose-lg max-w-none">
           <p className="text-gray-600 mb-6">
-            CureRoot is at the forefront of bridging traditional African medicine with modern scientific research through innovative AI-powered drug discovery. Our mission is to unlock the vast potential of natural compounds while preserving and honoring indigenous knowledge.
+            We are a biotechnology company based in South Africa that is discovering new drugs from African medicinal plants. By combining cutting-edge AI technology with local plant medicine knowledge, we leverage Africa's rich biodiversity to innovatively address global health challenges.
           </p>
           
           <h2 className="text-2xl font-semibold text-accent mt-8 mb-4">Our Vision</h2>
           <p className="text-gray-600 mb-6">
-            We envision a future where traditional medicine and modern science work in harmony to create sustainable, effective healthcare solutions. By leveraging artificial intelligence and deep learning technologies, we aim to accelerate the discovery of new therapeutic compounds while ensuring the preservation of traditional medical knowledge.
+            To become a global leader in drug discovery by developing natural compounds from African plants into life-saving therapeutics for the whole of humanity.
           </p>
           
           <h2 className="text-2xl font-semibold text-accent mt-8 mb-4">Our Approach</h2>
-          <p className="text-gray-600 mb-6">
-            Our unique approach combines:
-          </p>
           <ul className="list-disc pl-6 text-gray-600 mb-6">
-            <li>Advanced AI algorithms for compound analysis and prediction</li>
-            <li>Collaboration with traditional healers and indigenous communities</li>
-            <li>Rigorous scientific validation and testing</li>
-            <li>Sustainable and ethical sourcing practices</li>
+            <li><strong>AI-Driven Discovery:</strong> Advanced algorithms for analyzing and predicting therapeutic potential in natural compounds.</li>
+            <li><strong>Regional Knowledge Integration:</strong> Collaborations with local communities and researchers to unlock insights from centuries-old medicinal practices.</li>
+            <li><strong>Scientific Rigor:</strong> Comprehensive testing and validation processes to ensure efficacy and safety.</li>
+            <li><strong>Sustainable Sourcing:</strong> Ethical and environmentally responsible sourcing practices for natural materials.</li>
           </ul>
           
           <h2 className="text-2xl font-semibold text-accent mt-8 mb-4">Our Commitment</h2>
-          <p className="text-gray-600 mb-6">
-            We are committed to:
-          </p>
           <ul className="list-disc pl-6 text-gray-600 mb-6">
-            <li>Preserving and protecting traditional medical knowledge</li>
-            <li>Ensuring fair compensation for indigenous communities</li>
-            <li>Maintaining transparency in our research and development process</li>
-            <li>Contributing to sustainable healthcare solutions</li>
+            <li>Delivering innovative healthcare solutions that address unmet global needs.</li>
+            <li>Maintaining transparency in our research and commercialization processes.</li>
+            <li>Preserving and advancing African medicinal plant knowledge.</li>
           </ul>
         </div>
       </div>
