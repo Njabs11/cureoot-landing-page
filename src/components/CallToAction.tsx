@@ -1,10 +1,24 @@
+import { useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 
 export const CallToAction = () => {
+  useEffect(() => {
+    // Dynamically load the Typeform Embed SDK if it's not already included
+    if (!document.querySelector('script[src="https://embed.typeform.com/embed.js"]')) {
+      const script = document.createElement("script");
+      script.src = "https://embed.typeform.com/embed.js";
+      script.async = true;
+      document.body.appendChild(script);
+    }
+  }, []);
+
   const openTypeform = () => {
-    const popup = window as any;
-    popup.tf?.popup?.("https://form.typeform.com/to/W5ujnUGT");
+    if (window.tf && window.tf.popup) {
+      window.tf.popup("https://form.typeform.com/to/W5ujnUGT");
+    } else {
+      console.error("Typeform Embed SDK is not loaded or initialized.");
+    }
   };
 
   return (
@@ -18,8 +32,8 @@ export const CallToAction = () => {
           Explore how CureRoot is bringing innovation to drug discovery while preserving and honoring Africa's indigenous knowledge systems.
         </p>
         <div className="flex justify-center items-center">
-          <Button 
-            size="lg" 
+          <Button
+            size="lg"
             onClick={openTypeform}
             className="bg-primary hover:bg-primary/90 text-white px-8 py-7 text-lg font-medium tracking-wide min-w-[200px] transition-all duration-300 ease-out transform hover:scale-105"
           >
