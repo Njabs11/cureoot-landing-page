@@ -1,7 +1,16 @@
-import { Button } from "@/components/ui/button";
+import { useEffect } from "react";
 import { ArrowRight } from "lucide-react";
 
 export const CallToAction = () => {
+  useEffect(() => {
+    // @ts-ignore
+    if (window.tf) {
+      // @ts-ignore
+      window.tf.load();
+    }
+    console.log("Initializing Typeform in CallToAction");
+  }, []);
+
   return (
     <section className="py-32 px-4 relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-br from-secondary/5 to-primary/5"></div>
@@ -14,12 +23,6 @@ export const CallToAction = () => {
         </p>
         <div className="flex justify-center items-center">
           <div data-tf-live="01JG8QXHDHVY781MC3GJV483VD"></div>
-          <Button
-            size="lg"
-            className="bg-primary hover:bg-primary/90 text-white px-8 py-7 text-lg font-medium tracking-wide min-w-[200px] transition-all duration-300 ease-out transform hover:scale-105"
-          >
-            Contact Us <ArrowRight className="ml-2 h-5 w-5" />
-          </Button>
         </div>
         <p className="mt-16 text-2xl font-heading text-primary font-medium">Let's grow health, together.</p>
       </div>

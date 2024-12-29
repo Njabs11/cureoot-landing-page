@@ -1,6 +1,16 @@
 import { Button } from "@/components/ui/button";
+import { useEffect } from "react";
 
 export const Hero = () => {
+  useEffect(() => {
+    // @ts-ignore
+    if (window.tf) {
+      // @ts-ignore
+      window.tf.load();
+    }
+    console.log("Initializing Typeform in Hero");
+  }, []);
+
   return (
     <div className="relative min-h-[90vh] flex items-center justify-center px-4 py-20">
       <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-secondary/5 z-0" />
@@ -22,12 +32,6 @@ export const Hero = () => {
         </p>
         <div className="flex justify-center items-center">
           <div data-tf-live="01JG8QXHDHVY781MC3GJV483VD"></div>
-          <Button 
-            size="lg" 
-            className="bg-primary hover:bg-primary/90 text-white px-8 py-6 text-lg transition-all duration-300 ease-out transform hover:scale-105"
-          >
-            Contact Us
-          </Button>
         </div>
       </div>
     </div>

@@ -1,6 +1,16 @@
 import { Link } from "react-router-dom";
+import { useEffect } from "react";
 
 export const Footer = () => {
+  useEffect(() => {
+    // @ts-ignore
+    if (window.tf) {
+      // @ts-ignore
+      window.tf.load();
+    }
+    console.log("Initializing Typeform in Footer");
+  }, []);
+
   return (
     <footer className="bg-white border-t">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -15,9 +25,6 @@ export const Footer = () => {
               </li>
               <li>
                 <div data-tf-live="01JG8QXHDHVY781MC3GJV483VD"></div>
-                <a href="#" className="text-gray-600 hover:text-primary text-sm cursor-pointer">
-                  Contact Us
-                </a>
               </li>
             </ul>
           </div>
