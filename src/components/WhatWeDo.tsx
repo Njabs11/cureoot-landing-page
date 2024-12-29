@@ -15,7 +15,7 @@ const features = [
   {
     title: "Therapeutic Focus",
     description: "Targeting critical health challenges including infectious diseases, oncology, cardiometabolic disease, and autoimmune disorders with innovative solutions.",
-    icon: Pill,
+    icon: Brain,
   },
 ];
 
