@@ -1,26 +1,6 @@
 import { Link } from "react-router-dom";
-import { useEffect } from "react";
 
 export const Footer = () => {
-  useEffect(() => {
-    // Dynamically load the Typeform Embed SDK if not already present
-    if (!document.querySelector('script[src="https://embed.typeform.com/embed.js"]')) {
-      const script = document.createElement("script");
-      script.src = "https://embed.typeform.com/embed.js";
-      script.async = true;
-      document.body.appendChild(script);
-    }
-  }, []);
-
-  const openTypeform = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
-    e.preventDefault();
-    if (window.tf && window.tf.popup) {
-      window.tf.popup("https://form.typeform.com/to/W5ujnUGT");
-    } else {
-      console.error("Typeform Embed SDK is not loaded or initialized.");
-    }
-  };
-
   return (
     <footer className="bg-white border-t">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -34,11 +14,8 @@ export const Footer = () => {
                 </Link>
               </li>
               <li>
-                <a
-                  href="#"
-                  onClick={openTypeform}
-                  className="text-gray-600 hover:text-primary text-sm cursor-pointer"
-                >
+                <div data-tf-live="01JG8QXHDHVY781MC3GJV483VD"></div>
+                <a href="#" className="text-gray-600 hover:text-primary text-sm cursor-pointer">
                   Contact Us
                 </a>
               </li>
