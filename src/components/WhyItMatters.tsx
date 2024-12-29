@@ -2,16 +2,16 @@ import { Card, CardContent } from "@/components/ui/card";
 
 const stats = [
   {
-    number: "50,000+",
-    label: "Medicinal Plants in Africa",
-  },
-  {
-    number: "80%",
-    label: "of World Population Using Traditional Medicine",
+    number: "50,000",
+    label: "Known Plant Species in Africa",
   },
   {
     number: "25%",
-    label: "of Modern Medicines from Natural Products",
+    label: "of the World's Plant Genetic Resources",
+  },
+  {
+    number: "<1%",
+    label: "of African Plant Metabolites Studied",
   },
 ];
 
@@ -44,7 +44,7 @@ export const WhyItMatters = () => {
         </div>
         <div className="text-center">
           <p className="text-xl max-w-4xl mx-auto text-white/90 leading-relaxed">
-            By integrating traditional knowledge with modern science and AI technology, we're creating innovative treatments while preserving Africa's rich medicinal heritage.
+            Natural products and hybrid drugs outperform synthetics in clinical trials, advancing further with higher success rates and lower toxicity—paving the way for safer, more effective treatments.
           </p>
         </div>
       </div>

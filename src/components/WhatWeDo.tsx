@@ -1,4 +1,4 @@
-import { Leaf, Beaker, Brain } from "lucide-react";
+import { Leaf, Beaker, Pill } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 const features = [
@@ -15,7 +15,7 @@ const features = [
   {
     title: "Therapeutic Focus",
     description: "Targeting critical health challenges including infectious diseases, oncology, cardiometabolic disease, and autoimmune disorders with innovative solutions.",
-    icon: Brain,
+    icon: Pill,
   },
 ];
 

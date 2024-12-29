@@ -48,9 +48,7 @@ export const Footer = () => {
           <div>
             <h3 className="text-lg font-semibold mb-4 text-accent">About CureRoot</h3>
             <p className="text-gray-600 text-sm">
-              CureRoot is dedicated to bridging traditional African medicine with modern science
-              through AI-powered drug discovery. Our mission is to unlock the potential of natural
-              compounds while preserving indigenous knowledge.
+              CureRoot is advancing global drug discovery by leveraging Africa's rich biodiversity and cutting-edge AI technologies. Our mission is to uncover natural compounds from African plants and transform them into life-saving medicines for the world.
             </p>
           </div>
         </div>

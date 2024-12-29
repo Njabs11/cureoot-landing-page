@@ -40,11 +40,11 @@ export const Hero = () => {
           />
         </div>
         <h1 className="font-heading text-3xl md:text-5xl lg:text-6xl font-bold text-accent mb-8 leading-tight">
-          Ancient Wisdom, Modern Science,{" "}
-          <span className="text-primary">Global Impact</span>
+          Where Africa's Biodiversity Meets{" "}
+          <span className="text-primary">Tomorrow's Medicine</span>
         </h1>
         <p className="text-base md:text-lg mb-12 max-w-3xl mx-auto text-gray-600">
-          We are redefining drug discovery by leveraging Africa's rich biodiversity and traditional medicinal knowledge through cutting-edge AI technology.
+          Harnessing Africa's biodiversity to discover safer, more effective drugs—faster than ever with AI
         </p>
         <div className="flex justify-center items-center">
           <div data-tf-live="01JG8QXHDHVY781MC3GJV483VD"></div>

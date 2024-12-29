@@ -19,12 +19,12 @@ export const CallToAction = () => {
           Ready to <span className="text-primary">Learn More?</span>
         </h2>
         <p className="text-xl mb-12 text-gray-600 max-w-3xl mx-auto leading-relaxed">
-          Explore how CureRoot is bringing innovation to drug discovery while preserving and honoring Africa's indigenous knowledge systems.
+          Learn how CureRoot is transforming drug discovery by harnessing Africa's biodiversity and contributing to global scientific progress.
         </p>
         <div className="flex justify-center items-center">
           <div data-tf-live="01JG8QXHDHVY781MC3GJV483VD"></div>
         </div>
-        <p className="mt-16 text-2xl font-heading text-primary font-medium">Let's grow health, together.</p>
+        <p className="mt-16 text-2xl font-heading text-primary font-medium">Advancing global health, one discovery at a time.</p>
       </div>
     </section>
   );
