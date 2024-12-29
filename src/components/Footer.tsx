@@ -1,6 +1,19 @@
 import { Link } from "react-router-dom";
+import { useEffect } from "react";
 
 export const Footer = () => {
+  useEffect(() => {
+    // Initialize Typeform
+    const script = document.createElement("script");
+    script.src = "https://embed.typeform.com/embed.js";
+    script.async = true;
+    document.body.appendChild(script);
+
+    return () => {
+      document.body.removeChild(script);
+    };
+  }, []);
+
   return (
     <footer className="bg-white border-t">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -9,7 +22,7 @@ export const Footer = () => {
             <h3 className="text-lg font-semibold mb-4 text-accent">Company</h3>
             <ul className="space-y-3">
               <li>
-                <Link to="/" className="text-gray-600 hover:text-primary text-sm">
+                <Link to="/about-us" className="text-gray-600 hover:text-primary text-sm">
                   About Us
                 </Link>
               </li>
@@ -18,8 +31,13 @@ export const Footer = () => {
                   href="#" 
                   onClick={(e) => {
                     e.preventDefault();
-                    const popup = window as any;
-                    popup.tf?.popup?.("https://form.typeform.com/to/W5ujnUGT");
+                    // @ts-ignore
+                    if (window.tf && window.tf.popup) {
+                      // @ts-ignore
+                      window.tf.popup("https://form.typeform.com/to/W5ujnUGT");
+                    } else {
+                      console.error("Typeform not initialized");
+                    }
                   }}
                   className="text-gray-600 hover:text-primary text-sm cursor-pointer"
                 >
