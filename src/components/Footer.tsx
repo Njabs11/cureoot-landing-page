@@ -3,16 +3,23 @@ import { useEffect } from "react";
 
 export const Footer = () => {
   useEffect(() => {
-    // Initialize Typeform
-    const script = document.createElement("script");
-    script.src = "https://embed.typeform.com/embed.js";
-    script.async = true;
-    document.body.appendChild(script);
-
-    return () => {
-      document.body.removeChild(script);
-    };
+    // Dynamically load the Typeform Embed SDK if not already present
+    if (!document.querySelector('script[src="https://embed.typeform.com/embed.js"]')) {
+      const script = document.createElement("script");
+      script.src = "https://embed.typeform.com/embed.js";
+      script.async = true;
+      document.body.appendChild(script);
+    }
   }, []);
+
+  const openTypeform = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
+    e.preventDefault();
+    if (window.tf && window.tf.popup) {
+      window.tf.popup("https://form.typeform.com/to/W5ujnUGT");
+    } else {
+      console.error("Typeform Embed SDK is not loaded or initialized.");
+    }
+  };
 
   return (
     <footer className="bg-white border-t">
@@ -27,18 +34,9 @@ export const Footer = () => {
                 </Link>
               </li>
               <li>
-                <a 
-                  href="#" 
-                  onClick={(e) => {
-                    e.preventDefault();
-                    // @ts-ignore
-                    if (window.tf && window.tf.popup) {
-                      // @ts-ignore
-                      window.tf.popup("https://form.typeform.com/to/W5ujnUGT");
-                    } else {
-                      console.error("Typeform not initialized");
-                    }
-                  }}
+                <a
+                  href="#"
+                  onClick={openTypeform}
                   className="text-gray-600 hover:text-primary text-sm cursor-pointer"
                 >
                   Contact Us
@@ -46,7 +44,7 @@ export const Footer = () => {
               </li>
             </ul>
           </div>
-          
+
           <div>
             <h3 className="text-lg font-semibold mb-4 text-accent">Legal</h3>
             <ul className="space-y-3">
@@ -62,15 +60,17 @@ export const Footer = () => {
               </li>
             </ul>
           </div>
-          
+
           <div>
             <h3 className="text-lg font-semibold mb-4 text-accent">About CureRoot</h3>
             <p className="text-gray-600 text-sm">
-              CureRoot is dedicated to bridging traditional African medicine with modern science through AI-powered drug discovery. Our mission is to unlock the potential of natural compounds while preserving indigenous knowledge.
+              CureRoot is dedicated to bridging traditional African medicine with modern science
+              through AI-powered drug discovery. Our mission is to unlock the potential of natural
+              compounds while preserving indigenous knowledge.
             </p>
           </div>
         </div>
-        
+
         <div className="mt-8 pt-8 border-t text-center">
           <p className="text-sm text-gray-500">
             © {new Date().getFullYear()} CureRoot. All rights reserved.
