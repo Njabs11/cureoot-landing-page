@@ -1,9 +1,23 @@
 import { Button } from "@/components/ui/button";
+import { useEffect } from "react";
 
 export const Hero = () => {
+  useEffect(() => {
+    // Dynamically load the Typeform Embed SDK if not already present
+    if (!document.querySelector('script[src="https://embed.typeform.com/embed.js"]')) {
+      const script = document.createElement("script");
+      script.src = "https://embed.typeform.com/embed.js";
+      script.async = true;
+      document.body.appendChild(script);
+    }
+  }, []);
+
   const openTypeform = () => {
-    const popup = window as any;
-    popup.tf?.popup?.("https://form.typeform.com/to/W5ujnUGT");
+    if (window.tf && window.tf.popup) {
+      window.tf.popup("https://form.typeform.com/to/W5ujnUGT");
+    } else {
+      console.error("Typeform Embed SDK is not loaded or initialized.");
+    }
   };
 
   return (
