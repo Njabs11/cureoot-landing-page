@@ -3,12 +3,28 @@ import { useEffect } from "react";
 
 export const Hero = () => {
   useEffect(() => {
-    // @ts-ignore
-    if (window.tf) {
+    const loadTypeform = () => {
       // @ts-ignore
-      window.tf.load();
-    }
-    console.log("Initializing Typeform in Hero");
+      if (window.tf) {
+        try {
+          // @ts-ignore
+          window.tf.load();
+          console.log("Typeform loaded successfully in Hero");
+        } catch (error) {
+          console.error("Error loading Typeform in Hero:", error);
+        }
+      } else {
+        console.log("Typeform not available yet in Hero");
+      }
+    };
+
+    // Initial load attempt
+    loadTypeform();
+
+    // Retry after a short delay to ensure script is loaded
+    const retryTimeout = setTimeout(loadTypeform, 1000);
+
+    return () => clearTimeout(retryTimeout);
   }, []);
 
   return (
